@@ -1,8 +1,10 @@
 def letter_counter(file):
-    file_to_read = open(file, 'r')
-    text = file_to_read.read().lower()
+    num_of_letters = 0
     letter = input('Enter a letter: ')
-    num_of_letters = text.count(letter.lower())
+    with open(file, 'r') as file:
+        for line in file:
+            num_of_letters += line.count(letter.lower())
+    file.close()
     return print(f'Letter {letter} appears {num_of_letters} times in the file.')
 
 
