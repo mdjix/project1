@@ -6,12 +6,10 @@ def work_with_file(s1, s2, s3, s4):
     with open('file.txt', 'w') as my_file:
         for i in list1:
             my_file.write(i + '\n')
-    my_file.close()
 
     with open('file.txt', 'a') as my_file:
         for i in list2:
             my_file.write(i + '\n')
-    my_file.close()
     return my_file
 
 
